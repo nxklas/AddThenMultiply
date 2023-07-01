@@ -1,5 +1,5 @@
 function atm(start1, start2, threshold) {
-  if (threshold == 0)
+  if (threshold <= 0)
     return start1
 
   var isEven = false
