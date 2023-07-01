@@ -18,7 +18,7 @@
         /// <param name="arguments">A set of arguments for execution. This command ignores that parameter.</param>
         /// <returns>An <see cref="int"/> instance that represents 0, meaning the command is executed successfully. However, this method never returns.</returns>
         [System.Diagnostics.CodeAnalysis.DoesNotReturn]
-        public override int Execute(params string[] arguments)
+        public override object Execute(params string[] arguments)
         {
             System.Environment.Exit(0);
             return 0;

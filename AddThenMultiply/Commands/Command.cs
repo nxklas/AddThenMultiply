@@ -42,8 +42,8 @@ namespace AddThenMultiply.Commands
         /// Executes the command.
         /// </summary>
         /// <param name="arguments">A set of arguments for execution.</param>
-        /// <returns>An <see cref="int"/> instance that represents 0 when successful; otherwise, 1.</returns>
-        public abstract int Execute(params string[] arguments);
+        /// <returns>An <see cref="object"/> instance that represents the result of the execution.</returns>
+        public abstract object Execute(params string[] arguments);
 
         /// <summary>
         /// Gets all existing commands by using reflection. In favor of performance, it is recommended to use the <see cref="All"/> field.
