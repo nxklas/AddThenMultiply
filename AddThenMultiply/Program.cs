@@ -90,7 +90,7 @@ namespace AddThenMultiply
                     error = true;
                 }
 
-                var value = Run(start1, start2, error ? DefaultThreshold : threshold);
+                var value = AddThenMultiply(start1, start2, error ? DefaultThreshold : threshold);
 
                 Console.WriteLine($"The output is: {value}.{Environment.NewLine}");
             }
@@ -105,7 +105,7 @@ namespace AddThenMultiply
         /// <returns>An <see cref="ulong"/> instance that represents the value that is made when <paramref name="start1"/>
         /// and <paramref name="start2"/> are alternately added and multiplied to each other, starting with addition.
         /// Once this process is repeated <paramref name="threshold"/> times, the current value is returned.</returns>
-        private static ulong Run(ushort start1, ushort start2, ushort threshold)
+        private static ulong AddThenMultiply(ushort start1, ushort start2, ushort threshold)
         {
             if (threshold == 0)
                 return start1;
