@@ -83,15 +83,14 @@ namespace AddThenMultiply
                 }
 
                 var threshold = DefaultThreshold;
-                var parseFailed = false;
 
                 if (values.Length == 3 && !ushort.TryParse(values[2], out threshold))
                 {
                     Console.WriteLine($"The third value was not in the format of an unsigned int, the default threshold ({DefaultThreshold}) will be used instead.");
-                    parseFailed = true;
+                    error = true;
                 }
 
-                var value = Run(start1, start2, parseFailed ? DefaultThreshold : threshold);
+                var value = Run(start1, start2, error ? DefaultThreshold : threshold);
 
                 Console.WriteLine($"The output is: {value}.{Environment.NewLine}");
             }
